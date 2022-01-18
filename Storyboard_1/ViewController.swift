@@ -5,6 +5,8 @@
 //  Created by 최준호 on 2022/01/11.
 //
 
+//Git huv 연동방법
+
 import UIKit
 
 protocol Naming {
