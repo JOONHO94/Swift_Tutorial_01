@@ -78,6 +78,38 @@ class ViewController: UIViewController {
             print ("홀수: \(test)")
         }
         //where 조건문
+        DictionaryTest()
+    }
+    
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        //뷰 계층에 추가되어 화면에 나타나기 직전에 호출되는 메서드 여러번 호출 가능
+        //다른 뷰로 이동했다가 다시 돌아올떄 수행해야 하는 작업이 있으면 이 메서드를 통해 수행
+        print("viewWillAppear")
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear (animated)
+        //화면에 나타났을때 호출되는 메서드
+        print("viewDidAppear")
+    }
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        //뷰 계층에서 사라지기 직전에 호출되는 메서드
+        print("viewDidDisappear")
+        
+    }
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        //
+        print("viewWillLayoutSubviews")
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        //
+        print("viewDidLayoutSubviews")
     }
     
 //    @IBAction func btnChangeSizeImage(_ sender: UIButton) {
