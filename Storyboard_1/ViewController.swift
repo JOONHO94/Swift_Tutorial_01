@@ -79,6 +79,9 @@ class ViewController: UIViewController {
         }
         //where 조건문
         DictionaryTest()
+        SetTest1()
+        SetTest2()
+        EnumTest1()
     }
     
     
