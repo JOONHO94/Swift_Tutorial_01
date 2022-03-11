@@ -90,6 +90,49 @@ func EnumTest1() {
     }
     var highestEducationLevel3: School2 = School2.university
     print(highestEducationLevel3.rawValue)
+    
+    enum WeekDays: Character {
+        case mon = "월", tue = "화", wed = "수", thu = "목", fri = "금", sat = "토", sun = "일"
+    }
+    
+    let today: WeekDays = WeekDays.fri
+    print(today.rawValue)
+}
+
+
+func EnumTest2() {
+    //열거형의 원시 값 일부 지정 및 자동 처리
+    enum School1: String {
+        case primary = "유치원"
+        case elementary = "초등학교"
+        case middle = "중학교"
+        case hige = "고등학교"
+        case college
+        case university
+        case gradute
+    }
+    let highestEducationLevel1: School1 = School1.gradute
+    print(highestEducationLevel1.rawValue)
+    
+    enum Numbers: Int {
+        case zero
+        case one
+        case two
+        case ten = 10
+    }
+    let one = Numbers(rawValue: 1)
+    print("\(Numbers.zero.rawValue), \(Numbers.one.rawValue), \(Numbers.ten.rawValue)")
+    
+    //연관 값을 갖는 열거형
+    enum MainDish {
+        case pasta(taste: String)
+        case pizza(dough: String, topping: String)
+        case chicken(withSauce: Bool)
+        case rice
+    }
+    var dinner: MainDish = MainDish.pasta(taste: "cream")
+    
+    
 }
 
 

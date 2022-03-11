@@ -7,6 +7,150 @@
 
 import Foundation
 
+//if 구문 기본 구현
+func IfTest1() {
+    let first: Int = 5
+    let second: Int = 7
+    
+    if first > second {
+        print("IfTest1: first > second")
+    } else if first < second {
+        print("IfTest1: first < second")
+    } else {
+        print("IfTest1: first == second")
+    }
+}
+
+//if 구문의 다양한 구현
+func IfTest2() {
+    let first: Int = 5
+    let second: Int = 5
+    var biggerValue: Int = 0
+    
+    if (first > second) {
+        biggerValue = first
+    } else if (first == second) {
+        biggerValue = first
+    } else if (first < second) {
+        biggerValue = second
+    } else if (first == 5) {
+        biggerValue = 100
+    }
+    print("IfTest2: \(biggerValue)")
+}
+
+
+//switch 구문 기본 구현
+func SwitchTest1() {
+    let integerValue: Int = 5
+    
+    switch integerValue {
+    case 0:
+        print("SwitchTest1: Value == zero")
+    case 1...10:
+        print("SwitchTest1: Value == 1~10")
+        fallthrough  //다음 case도 실행하게 하는 기능
+    case Int.min..<0, 101..<Int.max:
+        print("SwitchTest1: Value < 0 or Value > 100")
+        break
+    default:   //한정된 범위가 명확하지 않다면 필수
+        print("SwitchTest1: 10 < Value <= 100")
+    }
+}
+
+
+//부동소수 타입의 범위 연산을 통한 switch case 구성
+func SwitchTest2() {
+    let doubleValue: Double = 3.0
+    
+    switch doubleValue {
+    case 0:
+        print("SwitchTest2: Value == zero")
+    case 1.5...10.5:
+        print("SwitchTest2: Value == zero")
+    default:
+        print("SwitchTest2: Value == \(doubleValue)")
+    }
+}
+
+
+//문자열 switch case 구성
+func SwitchTest3() {
+    let StringValue: String = "Choi"
+    
+    switch StringValue {
+    case "Joon":
+        print("SwitchTest3: Joon")
+    case "Ho":
+        print("SwitchTest3: Ho")
+    case "Korea", "Japan":
+        print("SwitchTest3: korea, Japan")
+    default:
+        print("SwitchTest3: Choi")
+    
+    }
+}
+
+
+//튜플 switch case 구성
+func SwitchTest4() {
+    typealias NameAge1 = (name: String, age: Int)
+    let tupleValue1: NameAge1 = ("Choi", 27)
+    
+    switch tupleValue1 {
+    case ("Choi", 27):
+        print("SwitchTest4: Okay")
+    default:
+        print("SwitchTest4: No")
+    }
+    
+    typealias NameAge2 = (name: String, age: Int)
+    let tupleValue2: NameAge2 = ("choi", 27)
+    
+    switch tupleValue2 {
+    case ("Choi", 27):
+        print("SwitchTest4: Okay")
+    case ("Choi", _):
+        print("SwitchTest4: 이름만")
+    case(_, 27):
+        print("SwitchTest4: 나이만")
+    default:
+        print("SwitchTest4: ???")
+    }
+}
+
+
+//값 바인딩을 사용한 튜플 switch case 구성
+func SwitchTest5() {
+    typealias NameAge = (name: String, age: Int)
+    let tupleValue: NameAge = ("choi", 27)
+    
+    switch tupleValue {
+    case("choi", 30):
+        print("SwitchTest5: okay" )
+    case("choi", let age):
+        print("SwitchTest5: 이름만 \(age)")
+    case(let name, 27):
+        print("SwitchTest5: 나이만\(name)")
+    default:
+        print("SwitchTest5: default")
+    }
+}
+
+
+//func SwitchTest6() {
+//    let 직급: String = "사원"
+//    let 연차: Int = 1
+//    let 인턴인가: Bool = false
+//    
+//    switch 직급 {
+//    case "사원" where 인턴인가 == true:
+//        print("SwitchTest6: 인턴입니다")
+//    case "사원" where 연차 < 2 && 인턴인가 == false:
+//        print("SwitchTest6: 신입사원입니다")
+//    }
+//}
+
 //이벤트가 발생하게 되면 앱은 해당 이벤트를 처리할 수 있는 가장 적절한 응답자 객체에게 이벤트 데이터를 전달하고 이를 first responder이라고 한다
 //first responder에서 처리되지 않은 이벤트들은 Responder chain을 따라 이벤트를 처리하는 객체를 찾아 거슬러 올라간다 앱의 구조에 따라 동적으로 형성된다
 

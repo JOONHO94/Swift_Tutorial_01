@@ -82,6 +82,15 @@ class ViewController: UIViewController {
         SetTest1()
         SetTest2()
         EnumTest1()
+        EnumTest2()
+        
+        IfTest1()
+        IfTest2()
+        SwitchTest1()
+        SwitchTest2()
+        SwitchTest3()
+        SwitchTest4()
+        SwitchTest5()
     }
     
     
