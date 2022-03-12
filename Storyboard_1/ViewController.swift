@@ -79,18 +79,26 @@ class ViewController: UIViewController {
         }
         //where 조건문
         DictionaryTest()
+        
         SetTest1()
         SetTest2()
+        
         EnumTest1()
         EnumTest2()
         
         IfTest1()
         IfTest2()
+        
         SwitchTest1()
         SwitchTest2()
         SwitchTest3()
         SwitchTest4()
         SwitchTest5()
+        SwitchTest6()
+        SwitchTest7()
+        SwitchTest8()
+        
+        ForTest1()
     }
     
     

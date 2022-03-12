@@ -138,18 +138,92 @@ func SwitchTest5() {
 }
 
 
-//func SwitchTest6() {
-//    let 직급: String = "사원"
-//    let 연차: Int = 1
-//    let 인턴인가: Bool = false
-//    
-//    switch 직급 {
-//    case "사원" where 인턴인가 == true:
-//        print("SwitchTest6: 인턴입니다")
-//    case "사원" where 연차 < 2 && 인턴인가 == false:
-//        print("SwitchTest6: 신입사원입니다")
-//    }
-//}
+//Where을 사용하여 switch case 확장
+func SwitchTest6() {
+    let 직급: String = "사원"
+    let 연차: Int = 1
+    let 인턴인가: Bool = false
+
+    switch 직급 {
+    case "사원" where 인턴인가 == true:
+        print("SwitchTest6: 인턴입니다")
+    case "사원" where 연차 < 2 && 인턴인가 == false:
+        print("SwitchTest6: 신입사원입니다")
+    case "사원" where 연차 > 5:
+        print("SwitchTest6: 5년차 신입")
+    case "사원":
+        print("SwitchTest6: 사원")
+    case "대리":
+        print("SwitchTest6: 대리")
+    default:
+        print("SwitchTest6: ????")
+    }
+}
+
+
+//열거형을 입력 값으로 받는 switch 구문
+func SwitchTest7() {
+    enum School{
+        case primary, elementary, middle, high, college, university, graduate
+    }
+    let 최종학력: School = School.university
+    
+    switch 최종학력 {
+    case .primary:
+        print("SwitchTest7: 최종학력은 유치원?")
+    case .elementary:
+        print("SwitchTest7: 최종학력은 초등학교")
+    case .middle:
+        print("SwitchTest7: 최종학력은 중학교")
+    case .high:
+        print("SwitchTest7: 최종학력은 고등학교")
+    case .college, .university:
+        print("SwitchTest7: 최종학력은 대학교")
+    case .graduate:
+        print("SwitchTest7: 최종학력은 대학원")
+    }
+}
+
+
+//Menu 열거형의 모든 case를 처리하는 switch 구문의 상태
+//차후에 Menu 열거형에 추가한 case를 처리하지 않으면 경고를 내어줄 unknown속성
+func SwitchTest8() {
+    enum Menu1 {
+        case chicken
+        case pizza
+    }
+    
+    let lunchMenu: Menu1 = .chicken
+    
+    switch lunchMenu {
+    case.chicken:
+        print("SwitchTest8: chicken")
+    case.pizza:
+        print("SwitchTest8: pizza")
+    case _:   //띄어쓰기 해야함 case default와 같은 표현
+        print("SwitchTest8: default")
+    }
+    
+    enum Menu2 {
+        case chicken
+        case pizza
+        case hamburger
+    }
+    
+    let dinnerMenu: Menu2 = .chicken
+    
+    switch dinnerMenu {
+    case .chicken:
+        print("SwitchTest8.Menu2: chicken")
+    case .pizza:
+        print("SwitchTest8.Menu2: pizza")
+    @unknown case _:   //swift는 미래에 추가될 수 있는 알려지지 않은 값에 대해 미리 준비할 수 있도록 권장 case, default에 사용가능
+        print("SwitchTest8.Menu2: difault")
+
+    }
+    
+    
+}
 
 //이벤트가 발생하게 되면 앱은 해당 이벤트를 처리할 수 있는 가장 적절한 응답자 객체에게 이벤트 데이터를 전달하고 이를 first responder이라고 한다
 //first responder에서 처리되지 않은 이벤트들은 Responder chain을 따라 이벤트를 처리하는 객체를 찾아 거슬러 올라간다 앱의 구조에 따라 동적으로 형성된다

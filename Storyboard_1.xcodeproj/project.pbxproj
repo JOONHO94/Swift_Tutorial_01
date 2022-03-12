@@ -13,6 +13,7 @@
 		7F1B8BAB278D1EB800C5CD6B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F1B8BA9278D1EB800C5CD6B /* Main.storyboard */; };
 		7F1B8BAD278D1EB900C5CD6B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F1B8BAC278D1EB900C5CD6B /* Assets.xcassets */; };
 		7F1B8BB0278D1EB900C5CD6B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F1B8BAE278D1EB900C5CD6B /* LaunchScreen.storyboard */; };
+		7F1D451727DCC6FA00C273A8 /* Swift_Tutorial_03.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1D451627DCC6FA00C273A8 /* Swift_Tutorial_03.swift */; };
 		7F37F37E27D62E2C001AB397 /* Swift_Tutorial_01.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F37F37D27D62E2C001AB397 /* Swift_Tutorial_01.swift */; };
 		7F37F38027D6E59E001AB397 /* Xcode_WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F37F37F27D6E59E001AB397 /* Xcode_WebView.swift */; };
 		7F37F38427D707C6001AB397 /* Swift_Tutorial_02.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F37F38327D707C6001AB397 /* Swift_Tutorial_02.swift */; };
@@ -28,6 +29,7 @@
 		7F1B8BAC278D1EB900C5CD6B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7F1B8BAF278D1EB900C5CD6B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7F1B8BB1278D1EB900C5CD6B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7F1D451627DCC6FA00C273A8 /* Swift_Tutorial_03.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Swift_Tutorial_03.swift; sourceTree = "<group>"; };
 		7F37F37D27D62E2C001AB397 /* Swift_Tutorial_01.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Swift_Tutorial_01.swift; sourceTree = "<group>"; };
 		7F37F37F27D6E59E001AB397 /* Xcode_WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Xcode_WebView.swift; sourceTree = "<group>"; };
 		7F37F38327D707C6001AB397 /* Swift_Tutorial_02.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Swift_Tutorial_02.swift; sourceTree = "<group>"; };
@@ -91,6 +93,7 @@
 			children = (
 				7F37F37D27D62E2C001AB397 /* Swift_Tutorial_01.swift */,
 				7F37F38327D707C6001AB397 /* Swift_Tutorial_02.swift */,
+				7F1D451627DCC6FA00C273A8 /* Swift_Tutorial_03.swift */,
 			);
 			path = Swift_Tutorial;
 			sourceTree = "<group>";
@@ -170,6 +173,7 @@
 				7F1B8BA4278D1EB800C5CD6B /* AppDelegate.swift in Sources */,
 				7F37F38027D6E59E001AB397 /* Xcode_WebView.swift in Sources */,
 				7F37F37E27D62E2C001AB397 /* Swift_Tutorial_01.swift in Sources */,
+				7F1D451727DCC6FA00C273A8 /* Swift_Tutorial_03.swift in Sources */,
 				7F37F38627D70830001AB397 /* Xcode_MapView.swift in Sources */,
 				7F1B8BA6278D1EB800C5CD6B /* SceneDelegate.swift in Sources */,
 				7F37F38427D707C6001AB397 /* Swift_Tutorial_02.swift in Sources */,
