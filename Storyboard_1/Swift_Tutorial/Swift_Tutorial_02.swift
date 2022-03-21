@@ -256,12 +256,21 @@ func SwitchTest8() {
 //var devChoiClone = devChoi
 // //Struct 복사
 //
-//// 옵셔널이란 있을 수도 있고 없을 수도 있다 아직 모른다
-//var someVariable : Int? = nil
-//
-//if someVariable == nil {
-//    someVariable = 90
-//}
+
+func OptionalsTest1() {
+    var myName: String? = "Joonho"
+    print(myName)
+    
+    switch checkOptionalV
+}
+// 옵셔널이란 있을 수도 있고 없을 수도 있다 아직 모른다
+func OptionalsTest10() {
+    var someVariable : Int? = nil
+    
+    if someVariable == nil {
+        someVariable = 90
+    }
+}
 ////언래필이란
 //if let otherVairable = someVariable
 //

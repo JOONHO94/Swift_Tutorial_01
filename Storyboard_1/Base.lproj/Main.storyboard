@@ -36,9 +36,8 @@
                                 <rect key="frame" x="184" y="502" width="49" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </switch>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bUr-z5-hns">
-                                <rect key="frame" x="20" y="44" width="190" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bUr-z5-hns">
+                                <rect key="frame" x="20" y="54" width="152" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Button_GoWebView">
                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -49,10 +48,12 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="pfM-hf-Tc7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Km4-XM-QBc"/>
+                            <constraint firstItem="bUr-z5-hns" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="NXZ-IC-huc"/>
                             <constraint firstItem="pfM-hf-Tc7" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Os8-C5-G8G"/>
                             <constraint firstItem="33I-OQ-827" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="159" id="P8A-3N-mlo"/>
                             <constraint firstItem="pfM-hf-Tc7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="PQ0-qc-Uuu"/>
                             <constraint firstItem="pfM-hf-Tc7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="RGt-Ye-Icx"/>
+                            <constraint firstItem="bUr-z5-hns" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="TWX-Zs-Ax7"/>
                             <constraint firstItem="pfM-hf-Tc7" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Tgj-qj-XSp"/>
                             <constraint firstItem="33I-OQ-827" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="523" id="WcU-eU-uZm"/>
                             <constraint firstItem="pfM-hf-Tc7" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="rzX-oy-jsf"/>

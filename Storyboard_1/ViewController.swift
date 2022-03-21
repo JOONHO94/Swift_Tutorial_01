@@ -77,6 +77,7 @@ class ViewController: UIViewController {
         for test in myArray where test % 2 != 0 {
             print ("홀수: \(test)")
         }
+      
         //where 조건문
         DictionaryTest()
         
@@ -99,6 +100,9 @@ class ViewController: UIViewController {
         SwitchTest8()
         
         ForTest1()
+        ForTest2()
+        WhileTest()
+        print(FuncTest2("Joon"))
     }
     
     

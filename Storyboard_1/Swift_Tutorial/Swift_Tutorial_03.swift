@@ -33,5 +33,65 @@ func ForTest1() {
     }
     print("ForTest1_4: \(result)")
     
-    //150p
 }
+
+func ForTest2() {
+    let friends: [String: Int] = ["joon": 94, "ho": 11, "choi": 09]
+    for tuple in friends {
+        print(tuple)
+    }
+    
+}
+
+
+//특정조건이 성립하는 한 내부의 코드를 반복해서 실행
+func WhileTest() {
+    var names: Array<String> = ["joon", "ho"]
+    print("ssssssssss")
+    while names.isEmpty == false {
+        print("WhileTest: \(names.removeFirst())")
+        
+    }
+}
+
+
+//do while 구문과 비슷 1회 실행한후 조건이 성립하면 반복 실행
+func RepeatWhileTest() {
+    var names: [String] = ["joon", "ho", "choi"]
+    repeat {
+        print("RepeatWhileTest: \(names.removeFirst())")
+    } while names.isEmpty == false
+}
+
+
+//func
+func hello(name: String) -> String {
+    return "Hello\(name)"
+}
+func FuncTest() {
+    let helloJenny: String = hello(name: "jenny")
+}
+
+
+// 매개변수마다 기본값을 지정할 수 있습니다. 즉, 매개변수가 전달되지 않으면 기본값을 사용한다
+func FuncTest2(_ name: String, times: Int = 3) -> String {
+    var result: String = ""
+    
+    for _ in 0..<times {
+        result += "Hello\(name)" + "  "
+    }
+    return result
+}
+
+
+//
+
+
+
+
+
+
+
+
+
+
