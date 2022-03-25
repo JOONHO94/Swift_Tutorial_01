@@ -7,6 +7,16 @@
 
 import Foundation
 
+protocol Naming {
+    func getName() -> String
+}
+protocol Aging {
+    func getAge() -> Int
+}
+typealias Friendable = Naming & Aging
+
+
+
 func DictionaryTest() {
     typealias StringIntDictionary = [String: Int]
     //typealias를 통해 조금 더 단순하게 표현해볼 수도 있다
@@ -31,6 +41,7 @@ func DictionaryTest() {
 }
 
 
+
 //세트는 같은 타입의 데이터를 순서 없이 하나의 묶음으로 저장하는 형태의 컬렉션 타입입니다
 //중복된 값이 존재하지 않는다, 순서가 중요하지 각 요소의 유일한 값이어야 하는 경우에 사용
 func SetTest1() {
@@ -46,6 +57,8 @@ func SetTest1() {
     print("SetTest \(type(of: numbers))")
     
 }
+
+
 
 func SetTest2() {
     let JapanClass: Set<String> = ["mina", "sana", "momo","Swift", "Xcode"]
@@ -68,6 +81,7 @@ func SetTest2() {
     print("SetTest2.isSubset \(JapanClass.isSubset(of: KoreaClass))")  //일본이 한국의 부분집합인지
     print("SetTest2.isSuperset \(JapanClass.isSuperset(of: KoreaClass))")
 }
+
 
 
 //열거형은 연관된 항목들을 묶어서 표현할 수 있는 타입 추가 수정이 불가
@@ -98,6 +112,7 @@ func EnumTest1() {
     let today: WeekDays = WeekDays.fri
     print(today.rawValue)
 }
+
 
 
 func EnumTest2() {

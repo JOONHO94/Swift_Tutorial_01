@@ -7,7 +7,6 @@
 
 import Foundation
 
-
 //for in 반복 구문의 활용
 func ForTest1() {
     for i in 0...2 {
@@ -44,6 +43,7 @@ func ForTest2() {
 }
 
 
+
 //특정조건이 성립하는 한 내부의 코드를 반복해서 실행
 func WhileTest() {
     var names: Array<String> = ["joon", "ho"]
@@ -55,6 +55,7 @@ func WhileTest() {
 }
 
 
+
 //do while 구문과 비슷 1회 실행한후 조건이 성립하면 반복 실행
 func RepeatWhileTest() {
     var names: [String] = ["joon", "ho", "choi"]
@@ -62,6 +63,7 @@ func RepeatWhileTest() {
         print("RepeatWhileTest: \(names.removeFirst())")
     } while names.isEmpty == false
 }
+
 
 
 //func
@@ -73,6 +75,7 @@ func FuncTest() {
 }
 
 
+
 // 매개변수마다 기본값을 지정할 수 있습니다. 즉, 매개변수가 전달되지 않으면 기본값을 사용한다
 func FuncTest2(_ name: String, times: Int = 3) -> String {
     var result: String = ""
@@ -82,6 +85,8 @@ func FuncTest2(_ name: String, times: Int = 3) -> String {
     }
     return result
 }
+
+
 
 
 //

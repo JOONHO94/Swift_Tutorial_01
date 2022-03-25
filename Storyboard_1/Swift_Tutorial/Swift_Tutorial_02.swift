@@ -225,43 +225,12 @@ func SwitchTest8() {
     
 }
 
-//이벤트가 발생하게 되면 앱은 해당 이벤트를 처리할 수 있는 가장 적절한 응답자 객체에게 이벤트 데이터를 전달하고 이를 first responder이라고 한다
-//first responder에서 처리되지 않은 이벤트들은 Responder chain을 따라 이벤트를 처리하는 객체를 찾아 거슬러 올라간다 앱의 구조에 따라 동적으로 형성된다
 
-//class Friend {
-//    var name : String
-//    var city : String
-//
-//    func changeName(newName: String) {
-//        self.name = newName
-//    }
-//    // (init 생성자)가 필요 메모리에 올린다
-//    // init으로 매개변수를 가진 생성자 메소드를 만들어야 매개변수를 넣어서 그 값을 가진 object를 만들 수 있다
-//    init(_ name: String, _ city: String) {
-//        self.name = name
-//        self.city = city
-//    }
-//}
-//var myFriend = Friend(name: "Choi", city: "seoul")      언더스코어 _를 사용하지 않았을때 생성 방식
-//var myFriend = Friend("Choi","seoul")
-//
-////
-//struct YoutuberStruct {
-//    var name : String
-//    var subscribersCount : Int
-//}
-//
-//var devChoi = YoutuberStruct(name: "Choi", subscribersCount: 29)
-//
-//var devChoiClone = devChoi
-// //Struct 복사
-//
 
 func OptionalsTest1() {
     var myName: String? = "Joonho"
     print(myName)
     
-    switch checkOptionalV
 }
 // 옵셔널이란 있을 수도 있고 없을 수도 있다 아직 모른다
 func OptionalsTest10() {
@@ -286,67 +255,255 @@ func OptionalsTest10() {
 //    print("unWrappedParam : ")
 //}
 //
-//  ViewController.swift
-//  Stroyboard_7
-//
-//  Created by 최준호 on 2022/01/17.
-
-// lazy 키워드
-// 고차함수 Higher Order Functions
-import UIKit
-var myArray = [3, 4, 5, 6, 7, 8, 10 ,20]
-
-var orderArray = myArray.sorted()
-
-var descendingArray = myArray.sorted(by: >)
 
 
 
 
-//
-//struct Pet {
-//    init() {
-//        print("Pet이 생성되었다")
-//    }
-//}
-//struct Friend {
-//    var name: String
-//    
-//    lazy var pet: Pet = Pet()   //당장 메모리에 올리지 않고 사용할떄 접근했을때 올린다
-//    //값이 넘어올때 발동되는 개념
-//    
-//    init(_ name: String) {
-//        self.name = name
-//        print("friend가 생성됨")
-//    }
-//}
-//
-//
-//func getName(_ name: String) -> String {
-//    return "내 이름은 \(name)"
-//}
-//
-//
+//구조체정의를 마친 후 인스턴스를 생성하고 초기화 할때는 기본적으로 생성되는 맴버 와이즈 이니셜라이저를 사용
+struct BasicInformation {
+    var name: String
+    var age: Int
+}
+
+var ChoiInfo: BasicInformation = BasicInformation(name: "Choi", age: 27)
+let JoonInfo: BasicInformation = BasicInformation(name: "Joonho", age: 27)
+
+func StructTest1() {
+    ChoiInfo.age = 100
+    ChoiInfo.name = "Joonho"
+    print("StructTest1: \(ChoiInfo.age)")
+    print("StructTest1: \(ChoiInfo.name)")
+    
+}
 
 
-//class ViewController: UIViewController {
+
+
+//swift class는 부모클래스가 없더라도 상속없이 단독으로 정의가 가능
+//class는 상속 받을 수 있기 때문에 상속 받을 때는 클래스 이름 뒤에 :을 써주고 부모클래스 이름을 명시
+class Person {
+    var height: Float = 0.0
+    var weight: Float = 0.0
+}
+
+var Joonho: Person = Person()
+let Choi: Person = Joonho   //Joonho Class의 참조를 할당
+let AnotherChoi: Person = Person()   //새로운 인스턴스를 생성
+
+func ClassTest1() {
+    var Choi: Person = Person()
+    Choi.height = 123.4
+    Choi.weight = 123.4
+
+}
+
+
+
+
 //
-//    override func viewDidLoad() {
-//        super.viewDidLoad()
-//        var myFriend = Friend("Choi")
-//        myFriend.pet
+//이벤트가 발생하게 되면 앱은 해당 이벤트를 처리할 수 있는 가장 적절한 응답자 객체에게 이벤트 데이터를 전달하고 이를 first responder이라고 한다
+//first responder에서 처리되지 않은 이벤트들은 Responder chain을 따라 이벤트를 처리하는 객체를 찾아 거슬러 올라간다 앱의 구조에 따라 동적으로 형성된다
+
+class ChoiFriend {
+    var name : String
+    var city : String
+
+    func changeName(newName: String) {
+        self.name = newName
+    }
+    // (init 생성자)가 필요 메모리에 올린다
+    // init으로 매개변수를 가진 생성자 메소드를 만들어야 매개변수를 넣어서 그 값을 가진 object를 만들 수 있다
+    init(_ name: String, _ city: String) {
+        self.name = name
+        self.city = city
+    }
+}
+//var myFriend = ChoiFriend(name: "Choi", city: "seoul")      //언더스코어 _를 사용하지 않았을때 생성 방식
+var myFriend = ChoiFriend("Choi","seoul")
+
 //
-//        var getNameClosure : (String) -> String
-//
-//        func sayHello ( getName: (String) -> String, name: String ) -> String {
-//            return getName(name)
-//        }
-//        // Do any additional setup after loading the view.
-//        myArray.sort()
-//        myArray.sort(by: >)
-//    }
-//
-//
-//}
+struct YoutuberStruct {
+    var name : String
+    var subscribersCount : Int
+}
+
+var devChoi = YoutuberStruct(name: "Choi", subscribersCount: 29)
+
+var devChoiClone = devChoi
+ //Struct 복사
+
+
+
+
+//저장 프로퍼티의 선언 및 인스턴스 생성
+struct CoordinatePoint {
+    var x: Int
+    var y: Int
+}
+let Point: CoordinatePoint = CoordinatePoint(x: 10, y: 5)
+
+class Position {
+    var point: CoordinatePoint   //저장 프로퍼티(변수) 변경될 수 있음을 뜻합니다
+    let name: String   //저장 프로퍼티 (상수)
+    
+    //프로퍼티 기본값을 지정해주지 않는다면 이니셜라이저를 따로 정의해주어야 한다
+    init(name: String, currentPoint: CoordinatePoint) {
+        self.name = name
+        self.point = currentPoint
+    }
+    //사용자 정의 이니셜라이저를 호출해야만 한다
+    //그렇지 않으면 프로퍼티 초깃값을 할당할 수 없기 때문에 인스턴스 생성이 불가능
+}
+
+let JoonPosition: Position = Position(name: "Joonho", currentPoint: Point)
+
+//저장 프로퍼티의 초깃값 지정
+//인스턴스를 생성할때 이니셜라이저를 통해 초깃값을 보내야 하는 이유는 프로퍼티가 옵셔널이 아닌 값으로 선언되어 있기 때문이다
+struct CoordinatePoint_01 {
+    var x: Int = 0
+    var y: Int = 0
+}
+
+let Point_01: CoordinatePoint_01 = CoordinatePoint_01()  //프로퍼티의 초깃값을 할당했다면 굳이 전달인자로 넘길 필요가 없습니다
+let PointAnother_01: CoordinatePoint_01 = CoordinatePoint_01(x: 10, y: 5)
+
+class Position_01 {
+    var point: CoordinatePoint_01 = Point_01   //저장 프로퍼티(변수) 변경될 수 있음을 뜻합니다
+    var name: String = "Unknown"   //저장 프로퍼티
+}
+
+let JoonPosition_01: Position_01 = Position_01()
+
+
+
+
+//옵셔널 저장 프로퍼티
+struct CoordinatePoint_02 {
+    var x: Int
+    var y: Int
+}
+
+class Position_02 {
+    var point: CoordinatePoint_02?   //Optionals 생성
+    let name: String
+    
+    init(name: String) {
+        self.name = name
+    }
+}
+
+let JoonPosition_02: Position_02 = Position_02(name: "Joonho")
+
+
+
+
+//지연저장 프로퍼티
+//복잡한 클래스나 구조체를 구현할때 많이 사용 굳이 모든 저장 프로퍼티를 사용할 필요가 없다면  불필요한 성능저하나 공간낭비를 줄여주기 위해 사용
+struct Pet {
+    init() {
+        print("Pet이 생성되었다")
+    }
+}
+struct Friend {
+    var name: String
+    
+    lazy var pet: Pet = Pet()   //당장 메모리에 올리지 않고 사용할떄 접근했을때 올린다
+    //값이 넘어올때 발동되는 개념
+    
+    init(_ name: String) {
+        self.name = name
+        print("friend가 생성됨")
+    }
+}
+
+var LazybarTest01: Friend = Friend("Joonho")
+
+struct CoordinatePoint01 {
+    var x: Int = 0
+    var y: Int = 0
+}
+
+class Position01 {
+    lazy var point = CoordinatePoint01()
+    let name: String
+    
+    init(_ name: String) {
+        self.name = name
+    }
+}
+
+let JoonPosition01: Position01 = Position01("Joonho")   //이 코드를 통해 point 프로퍼티로 처음 접근할때 CoordinatePoint01가 생성된다
+
+
+
+
+//메서드로 구현된 접근자와 설정자
+struct CoordinatePoint02 {
+    var x: Int   //저장 프로퍼티
+    var y: Int  //저장 프로퍼티
+    //대칭점을 구하는 메서드 - 접근자
+    //self는 타입 자기 자신을 뜻한다
+    //self 대신 CoordinatePoint02 사용해도 무방
+    func oppositePoint() -> Self {
+        return CoordinatePoint02(x: -x, y: -y)
+    }
+    //대칭점을 설정하는 메서드 - 설정자
+    //mutating 구조체의 매서드가 구조체 내부에서 데이터 수정 할떄는 mutating키워드 선언
+    mutating func setOppositePoint(_ opposite: CoordinatePoint02) {
+        x = -opposite.x
+        y = -opposite.y
+    }
+}
+
+
+
+
+//연산프로피터의 정의와 사용
+struct CoordinatePoint03 {
+    var x: Int  //저장 프로퍼티
+    var y: Int   //저장 프로퍼티
+    //접근자
+    var oppositePoint: CoordinatePoint03 {
+        get{
+            return CoordinatePoint03(x: -x, y: -y)
+        }
+        
+        //지정자
+        set(oppositePoint) {
+            x = -oppositePoint.x
+            y = -oppositePoint.y
+        }
+    }
+}
+
+var JoonPosition03: CoordinatePoint03 = CoordinatePoint03(x: 10, y: 5)
+//print(JoonPosition03)     CoordinatePoint03(x: 10, y: 5)
+//print(JoonPosition03.oppositePoint)     CoordinatePoint03(x: -10, y: -5)
+
+//JoonPosition03.oppositePoint = CoordinatePoint03(x: 10, y: 15)
+//print(JoonPosition03)     CoordinatePoint03(x: -10, y: -15)
+
+
+
+
+
+class Position02 {
+    var point: CoordinatePoint02?   //Optionals 생성
+    let name: String
+    
+    init(name: String) {
+        self.name = name
+    }
+}
+
+let JoonPosition02: Position02 = Position02(name: "Joonho")
+
+
+
+
+
+
+
+
 
 
