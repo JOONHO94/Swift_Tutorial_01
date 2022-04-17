@@ -48,6 +48,13 @@ class ViewController: UIViewController {
         print(FuncTest2("Joon"))
         
         StructTest1()
+        print("ClosureStudy \(reversed)")
+        
+        
+        
+        let test = Account()
+        test.balance = 500
+        test.balance = 300
       
     }
     override func viewWillAppear(_ animated: Bool) {
@@ -79,5 +86,18 @@ class ViewController: UIViewController {
         print("viewDidLayoutSubviews")
     }
     
+}
+
+//didSet, willSet in Swift
+class Account {
+    var balance: Int = 0 {
+        willSet(newValue) {
+            print("willSet : \(balance) -> \(newValue)")
+        }
+        
+        didSet(oldValue) {
+            print("didSet : \(oldValue) -> \(balance)")
+        }
+    }
 }
 

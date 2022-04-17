@@ -87,6 +87,13 @@ func FuncTest2(_ name: String, times: Int = 3) -> String {
 }
 
 
+func SortTest() {
+    var arr: Array = [1,2,3,4,5]
+}
+
+
+
+
 
 
 //
